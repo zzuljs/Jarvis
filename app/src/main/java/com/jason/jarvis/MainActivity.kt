@@ -1,6 +1,8 @@
 package com.jason.jarvis
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.PersistableBundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -11,8 +13,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.jason.jarvis.ui.theme.JarvisTheme
+import com.jason.lib.MyClass
 
+@Route(path = "./app/MainActivity")
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

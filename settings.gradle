@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Jarvis"
 include ':app'
+include ':network'
+include ':lib'
