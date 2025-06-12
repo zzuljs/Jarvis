@@ -44,6 +44,9 @@ dependencies {
     implementation libs.converter.gson
     implementation libs.core.ktx
 
+    // Retrofit
+    implementation libs.retrofit.v290
+
     // 如果需要其他转换器，例如 Scalars（字符串）、Jackson、Moshi 等
     // implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
     // implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
