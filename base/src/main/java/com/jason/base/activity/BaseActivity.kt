@@ -1,4 +1,4 @@
-package com.jason.base
+package com.jason.base.activity
 
 import androidx.activity.ComponentActivity
 

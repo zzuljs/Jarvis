@@ -34,6 +34,21 @@ dependencies {
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material
+
+    // ViewModel
+    // 用于 Kotlin 项目，提供了 by viewModels() 和 by activityViewModels() 委托
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    // 或者，如果你是纯 Java 项目或者不想使用 Kotlin 委托，可以使用这个
+    // implementation "androidx.lifecycle:lifecycle-viewmodel:2.7.0"
+
+    // LiveData
+    // 用于 Kotlin 项目，提供了对 LiveData 的 KTX 扩展
+    implementation libs.androidx.lifecycle.livedata.ktx
+    // 或者，如果你是纯 Java 项目，可以使用这个
+    // implementation "androidx.lifecycle:lifecycle-livedata:2.7.0"
+
+    // 生命周期感知组件（通常会包含，用于协程中的 lifecycleScope 等）
+    implementation libs.androidx.lifecycle.runtime.ktx.v270
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core

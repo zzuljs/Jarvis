@@ -14,7 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.jason.base.BaseActivity
+import com.jason.base.activity.BaseActivity
 import com.jason.jarvis.ui.theme.JarvisTheme
 import com.jason.lib.MyClass
 
