@@ -12,7 +12,7 @@ class MainApplication : Application() {
         if (BuildConfig.DEBUG){
             ARouter.debuggable()
         }
-
+        
         ARouter.init(this)
     }
 }

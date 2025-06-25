@@ -1,4 +1,9 @@
 plugins {
+    // 确保这里包含了 'kotlin-kapt'
+    id 'kotlin-kapt' // 这一行至关重要！
+
+    // 如果Hilt也要在这个模块使用，也要加上
+    id 'com.google.dagger.hilt.android'
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
 }
@@ -35,6 +40,16 @@ dependencies {
     implementation libs.androidx.appcompat
     implementation libs.material
 
+    // Hilt 核心库
+    implementation libs.hilt.android
+    // Hilt 注解处理器 (kapt for Kotlin)
+    kapt libs.hilt.compiler
+
+    // 如果您在ViewModel中使用Hilt，还需要添加以下依赖
+    implementation libs.androidx.hilt.navigation.fragment
+    // 或者 libs.androidx.hilt.lifecycle.viewmodel
+    kapt libs.androidx.hilt.compiler // 对应上面的Hilt ViewModel组件
+
     // ViewModel
     // 用于 Kotlin 项目，提供了 by viewModels() 和 by activityViewModels() 委托
     implementation libs.androidx.lifecycle.viewmodel.ktx
@@ -47,8 +62,18 @@ dependencies {
     // 或者，如果你是纯 Java 项目，可以使用这个
     // implementation "androidx.lifecycle:lifecycle-livedata:2.7.0"
 
+    // ARouter
+    implementation libs.arouter.api
+    annotationProcessor libs.arouter.compiler // 替换为最新版本
+
+    // 添加 MMKV 依赖，请替换为最新稳定版本
+    // 可以在 MMKV 的 GitHub Release 页面或 Maven Central 查询最新版本
+    implementation libs.mmkv // 示例版本，请替换为实际最新版本
+
+
     // 生命周期感知组件（通常会包含，用于协程中的 lifecycleScope 等）
     implementation libs.androidx.lifecycle.runtime.ktx.v270
+    implementation libs.androidx.lifecycle.common.jvm
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core

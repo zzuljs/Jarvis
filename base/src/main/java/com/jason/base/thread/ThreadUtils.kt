@@ -1,12 +1,10 @@
-package com.jason.base
+package com.jason.base.thread
 
 import android.content.Context
 import android.os.Handler
 import androidx.annotation.UiThread
 import java.util.concurrent.Executor
-import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-import java.util.concurrent.ThreadPoolExecutor
 
 object ThreadUtils {
 

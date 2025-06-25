@@ -4,4 +4,6 @@ alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.android.library) apply false
+    // 添加这一行来声明Hilt Gradle 插件
+    alias(libs.plugins.hilt.android) apply false // 这里引用了 libs.versions.toml 中 plugins 下的 hilt-android
 }

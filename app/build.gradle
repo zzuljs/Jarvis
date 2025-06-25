@@ -47,9 +47,8 @@ dependencies {
     implementation libs.androidx.ui.tooling.preview
     implementation libs.androidx.material3
 
-    implementation 'com.alibaba:arouter-api:1.5.2'
-    implementation project(':base') // 替换为最新版本
-    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2' // 替换为最新版本
+    implementation libs.arouter.api
+    annotationProcessor libs.arouter.compiler // 替换为最新版本
 
     implementation project(':lib')
     testImplementation libs.junit
@@ -61,4 +60,5 @@ dependencies {
     debugImplementation libs.androidx.ui.test.manifest
 
 
+    implementation project(':base') // 替换为最新版本
 }
