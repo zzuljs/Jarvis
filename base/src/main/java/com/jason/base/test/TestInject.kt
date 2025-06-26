@@ -2,6 +2,10 @@ package com.jason.base.test
 
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -28,4 +32,13 @@ class MyRepo @Inject constructor(
 
 class ApiService @Inject constructor() {
     fun getApiUrl() = "https://www.example.com"
+}
+
+@Module
+@InstallIn(SingletonComponent::class)
+class NetWorkModule {
+
+    @Provides
+    @Singleton
+    fun getNetWorkManager() = NetWorkModule()
 }
